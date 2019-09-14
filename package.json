@@ -2,10 +2,10 @@
   "name": "geolocation",
   "version": "1.0.0",
   "description": "",
-  "main": "geolocation.js",
   "scripts": {
+    "start": "nodemon --watch server/index.js",
     "start-dev": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --watch",
+    "build": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
