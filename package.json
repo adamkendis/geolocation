@@ -20,15 +20,11 @@
   "homepage": "https://github.com/adamkendis/geolocation#readme",
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "10"
-          }
-        }
-      ],
+      "@babel/preset-env",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
     ]
   },
   "dependencies": {
@@ -40,6 +36,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^6.26.3",
