@@ -1,9 +1,13 @@
 import React from 'react';
+import Map from './Map.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      latitude: 36.4974,
+      longitude: -118.2172,
+    };
     this.getCoords.bind(this);
   };
 
@@ -36,10 +40,11 @@ class App extends React.Component {
   render() {
     let {latitude, longitude, altitude, accuracy, altitudeAccuracy, heading, timestamp} = this.state;
     return (
-      <div>
+      <div id='info-wrapper' style={{height: '100%'}}>
         <div>Latitude: {latitude}</div>
         <div>Longitude: {longitude}</div>
         <div>Time: {timestamp}</div>
+      <Map latitude={latitude} longitude={longitude} />
       </div>
     )
   }
